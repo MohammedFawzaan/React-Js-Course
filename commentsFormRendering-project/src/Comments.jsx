@@ -19,14 +19,14 @@ const Comments = () => {
         });
     }
 
-    // Delete comment functionality
-    function deleteComment(commentId) {
+    function deleteComment(id) {
         // Remove the comment from the comments array
-        const updatedComments = comments.filter(comment => comment.id !== commentId);
-        setComments(updatedComments);
-
+        const updatedComments = comments.filter((comment) => {
+            return comment.id !== id
+        })
+        setComments(updatedComments)
         // Save the updated list of comments to localStorage
-        localStorage.setItem("comments", JSON.stringify(updatedComments));
+        localStorage.setItem("comments", JSON.stringify(updatedComments))
     }
 
     return (
