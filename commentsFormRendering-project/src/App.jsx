@@ -3,7 +3,7 @@ import Comments from './Comments'
 function App() {
   return (
     <>
-      <Comments />
+      < Comments/>
     </>
   )
 }
